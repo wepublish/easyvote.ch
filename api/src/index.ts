@@ -4,7 +4,7 @@ import {
   URLAdapter,
   PublicArticle,
   PublicPage,
-  Author, PublicComment
+  Author, PublicComment, Peer
 } from '@wepublish/api'
 
 
@@ -48,6 +48,10 @@ class EasyvoteURLAdapter implements URLAdapter {
   }
 
   getCommentURL(item: PublicArticle | PublicPage, comment: PublicComment): string {
+    return ''
+  }
+
+  getPeeredArticleURL(peer: Peer, article: PublicArticle): string {
     return ''
   }
 
