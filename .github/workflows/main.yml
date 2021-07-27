@@ -43,7 +43,7 @@ jobs:
         with:
           cluster_name: funiciello-dev-cluster
           location: europe-west6
-          project_id: easyvote-ch
+          project_id: wepublish-dev
           credentials: ${{ secrets.GCP_SA_KEY_WEP_DEV }}
       - name: Deploy to kubernetes
         run: kubectl apply -f ./kubernetesConfigs
