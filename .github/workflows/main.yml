@@ -29,8 +29,6 @@ jobs:
           docker push eu.gcr.io/${PROJECT_ID}/${GITHUB_REPOSITORY}/editor:${GITHUB_SHA}
           docker build --pull -t eu.gcr.io/${PROJECT_ID}/${GITHUB_REPOSITORY}/media:${GITHUB_SHA} ./media
           docker push eu.gcr.io/${PROJECT_ID}/${GITHUB_REPOSITORY}/media:${GITHUB_SHA}
-          docker build --pull -t eu.gcr.io/${PROJECT_ID}/${GITHUB_REPOSITORY}/website:${GITHUB_SHA} ./website
-          docker push eu.gcr.io/${PROJECT_ID}/${GITHUB_REPOSITORY}/website:${GITHUB_SHA}
       - uses: actions/setup-node@v1
         with:
           node-version: '10.x'
