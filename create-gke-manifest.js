@@ -12,7 +12,7 @@ if (GITHUB_REF === 'refs/heads/main' || GITHUB_REF === 'main') {
 }
 const NAMESPACE = envSwitch(ENVIRONMENT_NAME,'easyvote', 'easyvote-dev')
 
-const domain = 'easyvote.wepublish.dev'
+const domain = 'content.easyvote.ch'
 const devDomain = 'content.easyvote.dev'
 const domainCn = envSwitch(ENVIRONMENT_NAME, `${domain}`, `${devDomain}`)
 const domainSan = envSwitch(
