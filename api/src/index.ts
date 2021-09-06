@@ -40,11 +40,15 @@ class EasyvoteURLAdapter implements URLAdapter {
   }
 
   getAuthorURL(author: Author): string {
-    return `${this.websiteURL}/author/${author.slug || author.id}`
+    return `https://www.easyvote.ch/de/f/ueber-uns/team`
   }
 
   getArticlePreviewURL(token: string): string {
-    return `${this.websiteURL}/a/preview/${token}`
+    return `No Preview available`
+  }
+
+  getPagePreviewURL(token: string): string {
+    return `No Preview available`
   }
 
   getCommentURL(item: PublicArticle | PublicPage, comment: PublicComment): string {
@@ -141,11 +145,15 @@ async function asyncMain() {
     mediaAdapter,
     dbAdapter,
     paymentProviders: [],
+    mailContextOptions: {
+      defaultFromAddress: 'no-reply@easyvote.ch',
+      mailTemplateMaps: []
+    },
     mailProvider: undefined,
     oauth2Providers: [],
     logger,
     urlAdapter: new EasyvoteURLAdapter({websiteURL}),
-    playground: false,
+    playground: true,
     introspection: true,
     tracing: true
   })
