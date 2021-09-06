@@ -153,7 +153,7 @@ async function asyncMain() {
     oauth2Providers: [],
     logger,
     urlAdapter: new EasyvoteURLAdapter({websiteURL}),
-    playground: true,
+    playground: false,
     introspection: true,
     tracing: true
   })
