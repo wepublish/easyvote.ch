@@ -758,6 +758,10 @@ async function applyEditor() {
                 {
                   name: 'API_URL',
                   value: `https://${domainAPI}`
+                },
+                {
+                  name: 'PEER_BY_DEFAULT',
+                  value: 'true'
                 }
               ],
               ports: [
