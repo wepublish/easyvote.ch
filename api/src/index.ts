@@ -93,6 +93,7 @@ async function asyncMain() {
         input: {
           email: 'admin@easyvote.ch',
           name: 'Admin',
+          emailVerifiedAt: null,
           roleIDs: [adminUserRoleId],
           active: true,
           properties: []
